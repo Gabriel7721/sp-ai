@@ -107,10 +107,11 @@ class ChatController extends Controller
                 'ids' => $products->pluck('id'),
             ]);
         }
+        
         return response()->json([
             'chat_id' => $chat->id,
             'reply' => $reply,
-            'matched_products' => $products,
+            'matched_products' => ProductResource::collection($products),
         ]);
     }
 
