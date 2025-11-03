@@ -32,6 +32,4 @@ Route::middleware(['auth'])->group(function () {
     )->name('chat.index');
 });
 
-
-
 require __DIR__ . '/settings.php';

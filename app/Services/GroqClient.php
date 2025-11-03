@@ -18,7 +18,7 @@ class GroqClient
             env('GROQ_BASE_URL', 'https://api.groq.com/openai/v1')
         );
         $this->apiKey  = (string) env('GROQ_API_KEY', '');
-        $this->model   = (string) env('GROQ_MODEL', 'meta-llama/llama-3.1-70b-instruct');
+        $this->model   = (string) env('GROQ_MODEL', 'openai/gpt-oss-120b');
     }
 
     public function chat(array $messages, array $opts = []): array

@@ -12,11 +12,10 @@ export default function ProductList({ items }: { items: Product[] }) {
               <div className="text-sm text-gray-500">{p.category} • {p.brand}</div>
               <div className="font-medium">{p.name}</div>
               <div className="text-sm mt-1">{new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                }).format(Number(p.price))} {p.currency}
-
-                
+                    style: 'currency',
+                    currency: 'USD',
+                  })
+                  .format(Number(p.price))} {p.currency}
               </div>
               {p.attributes ? (
                 <div className="text-xs text-gray-600 mt-1">
